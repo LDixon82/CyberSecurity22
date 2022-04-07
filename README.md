@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Azure Cloud Network](./Diagrams/Azure_Cloud.drawio.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the <b>yml</b> file may be used to install only certain pieces of it, such as Filebeat.
 
 [Filebeat Playbook](./Ansible/filebeat-playbook.yml)
 
@@ -25,12 +25,22 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly <b>available</b>, in addition to restricting <b>traffic</b> to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+What aspect of security do load balancers protect?
+- <b>A load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by shifting attack traffic from the corporate server to a   public cloud provider.</b>
+
+What is the advantage of a jump box?
+- <b>A jump box is a secure computer that you will first connect to before connecting to other servers or untrusted environments.</b>
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the <b>data</b> and system <b>logs</b>.
+
+What does Filebeat watch for?
+- <b>Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.</b>
+
+What does Metricbeat record?
+- <b>Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server, such as: Apache.
+</b>
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -46,12 +56,17 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the <b>jump box provisioner</b> machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- <b>My public IP address</b>
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by <b>the jump box provisioner through ssh</b>.
 
+Which machine did you allow to access your ELK VM? 
+-  <b>Jump Box Provisioner</b>
+
+What was its IP address?_
+-  <b>IP address: 10.1.0.4:5601</b>
+  
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
@@ -77,10 +92,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- <b>Web-1 IP Address:10.0.0.8</b>
+- <b>Web-2 IP Address:10.0.0.9</b>
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- <b>Filebeat</b>
+- <b>Metricbeat</b>
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
