@@ -170,10 +170,10 @@ Where do you copy it?_
 - <b>etc/ansible/filebeat.yml</b>
 - <b>etc/ansbile/metricbeat.yml</b>
 
-- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - <b>Update the filebeat_config and metricbeat_config. You will update the etc/ansible/hosts to specify the servers and IP addresses for each machine.</b>
--
-- _Which URL do you navigate to in order to check that the ELK server is running?
+
+Which URL do you navigate to in order to check that the ELK server is running?
 - <b>http://[your.ELK-VM.Public.IP]:5601/app/kibana.</b>
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
