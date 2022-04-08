@@ -79,12 +79,14 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+What is the main advantage of automating configuration with Ansible?
+
+- <b>Using Playbooks in Ansible is one of maine advantages of Ansible. Playbooks are Ansible configuration files, and the language for writing them is YAML.</b> 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
+- Install Docker to the ELK server, Install docker.io, python3-pip, and Docker module 
 ```javascript
 ---
 - name: Configure Elk VM with Docker
@@ -107,6 +109,7 @@ The playbook implements the following tasks:
         name: docker
         state: present
 ```
+- Increase the virtual memory
 ```Javascript
     - name: Increase virtual memory
       command: sysctl -w vm.max_map_count=262144
@@ -117,6 +120,7 @@ The playbook implements the following tasks:
         state: present
         reload: yes
 ```
+- Download and launch Docker ELK container to run on ports 5601,9200,5044
 ```Javascript
     - name: download and launch a docker elk container
       docker_container:
