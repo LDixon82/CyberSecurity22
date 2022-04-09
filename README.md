@@ -152,7 +152,10 @@ We have installed the following Beats on these machines:
 - <b>Metricbeat</b>
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
+
+- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. An example is the majority of traffic on a website by particular country
+- Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server, such as: Apache. An example is Uptime Monitoring which checks the availability and the response time of your website and publicly accessible infrastructure
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
