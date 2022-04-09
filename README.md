@@ -72,9 +72,9 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | Personal IP          |
-| Web-1    | No                  |                      |
-| Web-2    | No                  |                      |
-| Elk      | No                  |                      |
+| Web-1    | No                  | 20.187.67.120        |
+| Web-2    | No                  | 20.187.67.120        |
+| Elk      | No                  | 20.213.90.251        |
 
 ### Elk Configuration
 
