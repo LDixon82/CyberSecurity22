@@ -72,9 +72,11 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | Personal IP          |
-| Web-1    | No                  | 20.187.67.120        |
-| Web-2    | No                  | 20.187.67.120        |
-| Elk      | No                  | 20.213.90.251        |
+| Web-1    | No                  | 10.0.0.8             |
+| Web-2    | No                  | 10.0.0.9             |
+| Web-1 LB | Yes                 | 20.187.67.120        |
+| Web-2 LB | Yes                 | 20.187.67.120        |
+| Elk      | Yes                 | Public IP            |
 
 ### Elk Configuration
 
@@ -170,6 +172,8 @@ Which file is the playbook?
 - [Filebeat Playbook](./Ansible/filebeat-playbook.yml)
 
 - [Metricbeat Playbook](./Ansible/metricbeat-playbook.yml)
+
+- [Elk Install](./Ansible/install-elk.yml)
 
 Where do you copy it?
 - <b>etc/ansible/
