@@ -176,7 +176,7 @@ Which file is the playbook?
 - [Elk Install](./Ansible/install-elk.yml)
 
 Where do you copy it?
-- <b>etc/ansible/
+- <b>etc/ansible/</b>
 
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 - <b>Update the filebeat_config and metricbeat_config. You will update the etc/ansible/hosts to specify the servers and IP addresses for each machine.</b>
@@ -184,4 +184,4 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 Which URL do you navigate to in order to check that the ELK server is running?
 - <b>http://[your.ELK-VM.Public.IP]:5601/app/kibana.</b>
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
