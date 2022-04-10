@@ -64,7 +64,7 @@ Machines within the network can only be accessed by <b>the jump box provisioner 
 Which machine did you allow to access your ELK VM? 
 -  <b>Jump Box Provisioner</b>
 
-What was its IP address?_
+What was its IP address?
 -  <b>IP address: 10.1.0.4:5601</b>
   
 A summary of the access policies in place can be found in the table below.
@@ -178,7 +178,7 @@ Which file is the playbook?
 Where do you copy it?
 - <b>etc/ansible/
 
-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 - <b>Update the filebeat_config and metricbeat_config. You will update the etc/ansible/hosts to specify the servers and IP addresses for each machine.</b>
 
 Which URL do you navigate to in order to check that the ELK server is running?
